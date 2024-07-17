@@ -123,6 +123,7 @@ func setNewLog(log string) {
 	data := []byte(log)
 	file, err := os.OpenFile("changeLog.log", os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
+		setNewLog("Error in create new log (ERROR)")
 		panic(err)
 	}
 	defer file.Close()

@@ -6,7 +6,7 @@ const (
 	SCREEN_WIDTH  rune = 1150
 	SCREEN_HEIGHT rune = 800
 	SCREEN_TITLE       = "Game"
-	TARGET_FPS         = 2048
+	TARGET_FPS         = 120
 	CUBE_SIZE          = 50
 )
 

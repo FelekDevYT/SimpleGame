@@ -2,6 +2,7 @@ package main
 
 import (
 	rl "github.com/gen2brain/raylib-go/raylib"
+	"strconv"
 )
 
 func input() {
@@ -25,18 +26,25 @@ func input() {
 		}
 	} else if rl.IsKeyPressed(rl.KeyOne) {
 		current_slot = 0
+		setNewLog("Set current slot to " + strconv.Itoa(int(current_slot)))
 	} else if rl.IsKeyPressed(rl.KeyTwo) {
 		current_slot = 1
+		setNewLog("Set current slot to " + strconv.Itoa(int(current_slot)))
 	} else if rl.IsKeyPressed(rl.KeyThree) {
 		current_slot = 2
+		setNewLog("Set current slot to " + strconv.Itoa(int(current_slot)))
 	} else if rl.IsKeyPressed(rl.KeyFour) {
 		current_slot = 3
+		setNewLog("Set current slot to " + strconv.Itoa(int(current_slot)))
 	} else if rl.IsKeyPressed(rl.KeyFive) {
 		current_slot = 4
+		setNewLog("Set current slot to " + strconv.Itoa(int(current_slot)))
 	} else if rl.IsKeyPressed(rl.KeySix) {
 		current_slot = 5
+		setNewLog("Set current slot to " + strconv.Itoa(int(current_slot)))
 	} else if rl.IsKeyPressed(rl.KeySeven) {
 		current_slot = 6
+		setNewLog("Set current slot to " + strconv.Itoa(int(current_slot)))
 	} else if rl.IsMouseButtonPressed(rl.MouseLeftButton) { //153 481
 		if isOpenedInventory {
 			if rl.GetMouseX() >= 360 && rl.GetMouseX() <= 410 && rl.GetMouseY() >= SCREEN_HEIGHT-380 {
@@ -61,6 +69,7 @@ func input() {
 				inventory[current_slot] = 6
 				current_slot++
 			}
+			setNewLog("setting up of new block in inventory")
 		} else {
 			x := rl.GetMouseX()
 			y := rl.GetMouseY()
@@ -76,18 +85,25 @@ func input() {
 
 	if current_slot == 0 {
 		renderCubeInInventory(380, SCREEN_HEIGHT-80, getInventoryColor(inventory[0]))
+		setNewLog("Change render current slot to 0")
 	} else if current_slot == 1 {
 		renderCubeInInventory(430, SCREEN_HEIGHT-80, getInventoryColor(inventory[1]))
+		setNewLog("Change render current slot to 1")
 	} else if current_slot == 2 {
 		renderCubeInInventory(480, SCREEN_HEIGHT-80, getInventoryColor(inventory[2]))
+		setNewLog("Change render current slot to 2")
 	} else if current_slot == 3 {
 		renderCubeInInventory(530, SCREEN_HEIGHT-80, getInventoryColor(inventory[3]))
+		setNewLog("Change render current slot to 3")
 	} else if current_slot == 4 {
 		renderCubeInInventory(580, SCREEN_HEIGHT-80, getInventoryColor(inventory[4]))
+		setNewLog("Change render current slot to 4")
 	} else if current_slot == 5 {
 		renderCubeInInventory(630, SCREEN_HEIGHT-80, getInventoryColor(inventory[5]))
+		setNewLog("Change render current slot to 5")
 	} else if current_slot == 6 {
 		renderCubeInInventory(680, SCREEN_HEIGHT-80, getInventoryColor(inventory[6]))
+		setNewLog("Change render current slot to 6")
 	}
 
 }

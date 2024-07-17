@@ -1,6 +1,9 @@
 package main
 
-import rl "github.com/gen2brain/raylib-go/raylib"
+import (
+	rl "github.com/gen2brain/raylib-go/raylib"
+	"strconv"
+)
 
 func update() {
 	rl.BeginDrawing()
@@ -29,6 +32,8 @@ func update() {
 			renderCube(rune(360+(CUBE_SIZE*i)), SCREEN_HEIGHT-380, getInventoryColor(rune(i)))
 		}
 	}
+
+	rl.DrawText(strconv.Itoa(int(rl.GetFPS())), 10, 10, 40, rl.DarkGray)
 
 	rl.EndDrawing()
 }

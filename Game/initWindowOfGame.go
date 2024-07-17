@@ -3,13 +3,16 @@ package main
 import (
 	rl "github.com/gen2brain/raylib-go/raylib"
 	"os"
+	"strconv"
 )
 
 func initWindowOfGame() {
 
+	setNewLog("Setting up logger")
 	file, err := os.Create("changeLog.log")
 	if err != nil {
 		println(err.Error())
+		setNewLog("Error of setting up logger")
 		os.Exit(1)
 	}
 	defer file.Close()
@@ -19,7 +22,7 @@ func initWindowOfGame() {
 	setNewLog("Window has successfully initialized")
 
 	rl.SetTargetFPS(TARGET_FPS)
-	setNewLog("FPS successfully set to 2048")
+	setNewLog("FramesPerSecond set to " + strconv.Itoa(int(TARGET_FPS)))
 
 	createMap()
 	setNewLog("Map successfully created")
