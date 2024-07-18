@@ -1,12 +1,12 @@
-package main
+package gamePart
 
 import (
 	"fmt"
 	"os"
 )
 
-func quit() {
+func Quit() {
 	fmt.Println("You are quitting")
-	setNewLog("Game has closed")
+	SetNewLog("Game has closed")
 	os.Exit(0)
 }

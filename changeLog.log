@@ -1,38 +1,9 @@
-[13:13:45]Logger has created/opened
-[13:13:45]Window has successfully initialized
-[13:13:45]FramesPerSecond set to 120
-[13:13:45][MAPPING-1]Generate points of heights
-[13:13:45][MAPPING-2]Setting points to MAP
-[13:13:45][MAPPING-3]Setting levels of height to MAP
-[13:13:45]Map successfully created
-[13:13:45]Game has successfully created
-[13:13:45]Game has going to update part
-[13:13:52]player change position to UP
-[13:13:53]player change position to DOWN
-[13:13:53]player change position to UP
-[13:13:53]player change position to LEFT
-[13:13:53]player change position to UP
-[13:13:54]player change position to DOWN
-[13:13:54]player change position to RIGHT
-[13:13:54]player change position to UP
-[13:13:55]player change position to LEFT
-[13:13:55]player change position to DOWN
-[13:13:55]player change position to RIGHT
-[13:13:56]player change position to DOWN
-[13:13:56]player change position to DOWN
-[13:13:56]player change position to DOWN
-[13:13:56]player change position to DOWN
-[13:13:57]player change position to DOWN
-[13:13:57]player change position to DOWN
-[13:13:57]player change position to DOWN
-[13:13:59]setting up of new block in inventory
-[13:13:01]Set current slot to 0
-[13:13:02]Set new block at an pos
-[13:13:02]Set new block at an pos
-[13:13:03]Set new block at an pos
-[13:13:04]player change position to DOWN
-[13:13:04]player change position to UP
-[13:13:05]player change position to DOWN
-[13:13:05]player change position to UP
-[13:13:06]Game has been closed
-[13:13:06]Game has closed
+[20:20:31]Logger has created/opened
+[20:20:31]Window has successfully initialized
+[20:20:31]FramesPerSecond set to 120
+[20:20:31][MAPPING-1]Generate points of heights
+[20:20:31][MAPPING-2]Setting points to MAP
+[20:20:31][MAPPING-3]Setting levels of height to MAP
+[20:20:31]Map successfully created
+[20:20:31]Game has successfully created
+[20:20:31]Game has going to update part

@@ -1,4 +1,4 @@
-package main
+package gamePart
 
 import rl "github.com/gen2brain/raylib-go/raylib"
 
@@ -26,6 +26,7 @@ var (
 		"TRANSPARENT": rl.Black,
 	}
 	isOpenedInventory bool    = false
+	isOpenedMenu      bool    = false
 	current_slot              = 0
 	inventory         [7]rune = [7]rune{
 		7, 7, 7, 7, 7, 7, 7,

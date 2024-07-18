@@ -1,6 +1,6 @@
-package main
+package gamePart
 
-func createMap() {
+func CreateMap() {
 	var points [1000]rune
 
 	for i := 0; rune(i) < (SCREEN_WIDTH / CUBE_SIZE); i++ {
@@ -15,7 +15,7 @@ func createMap() {
 		}
 	}
 
-	setNewLog("[MAPPING-1]Generate points of heights")
+	SetNewLog("[MAPPING-1]Generate points of heights")
 
 	for X := 0; rune(X) < (SCREEN_WIDTH / CUBE_SIZE); X++ {
 		for Y := 0; rune(Y) < points[X]; Y++ {
@@ -23,7 +23,7 @@ func createMap() {
 		}
 	}
 
-	setNewLog("[MAPPING-2]Setting points to MAP")
+	SetNewLog("[MAPPING-2]Setting points to MAP")
 
 	for X := 0; rune(X) < (SCREEN_WIDTH / CUBE_SIZE); X++ {
 		for Y := 0; rune(Y) < (SCREEN_HEIGHT / CUBE_SIZE); Y++ {
@@ -47,10 +47,11 @@ func createMap() {
 		}
 	}
 
-	setNewLog("[MAPPING-3]Setting levels of height to MAP")
+	SetNewLog("[MAPPING-3]Setting levels of height to MAP")
+
 }
 
-func drawMap() {
+func DrawMap() {
 	for i := 0; i < int(SCREEN_WIDTH); i += CUBE_SIZE {
 		for j := 0; j < int(SCREEN_HEIGHT); j += CUBE_SIZE {
 			switch MAP[i/CUBE_SIZE][j/CUBE_SIZE] {

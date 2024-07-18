@@ -1,11 +1,11 @@
-package main
+package gamePart
 
 import (
 	rl "github.com/gen2brain/raylib-go/raylib"
 	"strconv"
 )
 
-func update() {
+func Update() {
 	rl.BeginDrawing()
 
 	rl.ClearBackground(rl.SkyBlue)
@@ -14,7 +14,7 @@ func update() {
 		current_slot = 0
 	}
 
-	drawMap()
+	DrawMap()
 
 	drawInventory()
 
@@ -34,6 +34,11 @@ func update() {
 	}
 
 	rl.DrawText(strconv.Itoa(int(rl.GetFPS())), 10, 10, 40, rl.DarkGray)
+
+	if isOpenedMenu {
+		rl.DrawRectangle(SCREEN_WIDTH/4+15, 300, 500, 100, rl.Black)
+		rl.DrawText("Quit from the game", SCREEN_WIDTH/4+90, 330, 40, rl.White)
+	}
 
 	rl.EndDrawing()
 }

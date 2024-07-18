@@ -1,4 +1,4 @@
-package main
+package gamePart
 
 import (
 	rl "github.com/gen2brain/raylib-go/raylib"
@@ -16,13 +16,13 @@ func renderCube(x rune, y rune, color rl.Color) {
 	rl.DrawLine(x+CUBE_SIZE, y, x+CUBE_SIZE, y+CUBE_SIZE, rl.Gray)
 }
 
-func renderCubeInInventory(x rune, y rune, color rl.Color) {
+func renderCubeInCurrentPositionOnInventory(x rune, y rune, color rl.Color) {
 	rl.DrawRectangle(x, y, CUBE_SIZE, CUBE_SIZE, color)
 	rl.SetLineWidth(3)
-	rl.DrawLine(x, y, x+CUBE_SIZE, y, rl.LightGray)
-	rl.DrawLine(x, y, x, y+CUBE_SIZE, rl.LightGray)
-	rl.DrawLine(x, y+CUBE_SIZE, x+CUBE_SIZE, y+CUBE_SIZE, rl.LightGray)
-	rl.DrawLine(x+CUBE_SIZE, y, x+CUBE_SIZE, y+CUBE_SIZE, rl.LightGray)
+	rl.DrawLine(x, y, x+CUBE_SIZE, y, rl.Blue)
+	rl.DrawLine(x, y, x, y+CUBE_SIZE, rl.Blue)
+	rl.DrawLine(x, y+CUBE_SIZE, x+CUBE_SIZE, y+CUBE_SIZE, rl.Blue)
+	rl.DrawLine(x+CUBE_SIZE, y, x+CUBE_SIZE, y+CUBE_SIZE, rl.Blue)
 }
 
 func renderPlayer() {
@@ -118,12 +118,12 @@ func isOre(lvl []rune) bool {
 LOGGER - USE LOGGER FOR INFO OF GAME
 */
 
-func setNewLog(log string) {
+func SetNewLog(log string) {
 	log = "[" + time.Now().Format("15:15:05") + "]" + log + "\n"
 	data := []byte(log)
 	file, err := os.OpenFile("changeLog.log", os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
-		setNewLog("Error in create new log (ERROR)")
+		SetNewLog("Error in create new log (ERROR)")
 		panic(err)
 	}
 	defer file.Close()
