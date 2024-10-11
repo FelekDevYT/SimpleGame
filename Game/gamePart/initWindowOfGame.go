@@ -21,6 +21,8 @@ func InitWindowOfGame() {
 	rl.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
 	SetNewLog("Window has successfully initialized")
 
+	SetNewLog("CameraManager has initialized")
+
 	rl.SetTargetFPS(TARGET_FPS)
 	SetNewLog("FramesPerSecond set to " + strconv.Itoa(int(TARGET_FPS)))
 

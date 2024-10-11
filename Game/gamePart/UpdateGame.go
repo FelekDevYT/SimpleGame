@@ -18,6 +18,8 @@ func Update() {
 
 	drawInventory()
 
+	playerReffer()
+
 	input()
 
 	if PLAYER_Y >= int(SCREEN_HEIGHT-100) {
@@ -41,4 +43,16 @@ func Update() {
 	}
 
 	rl.EndDrawing()
+}
+
+func playerReffer() {
+	if PLAYER_X <= 0-CUBE_SIZE {
+		PLAYER_X = PLAYER_X + CUBE_SIZE
+	} else if PLAYER_X >= int(SCREEN_WIDTH) {
+		PLAYER_X = PLAYER_X - CUBE_SIZE
+	} else if PLAYER_Y >= int(SCREEN_HEIGHT) {
+		PLAYER_Y = PLAYER_Y - CUBE_SIZE
+	} else if PLAYER_Y <= 0+CUBE_SIZE {
+		PLAYER_Y = PLAYER_Y + CUBE_SIZE
+	}
 }
