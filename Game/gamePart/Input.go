@@ -92,7 +92,7 @@ func input() {
 
 			MAP[cube_x][cube_y] = inventory[current_slot]
 
-			SetNewLog("Set new block at an pos")
+			SetNewLog("Set new block at: " + strconv.Itoa(int(cube_x)) + ", " + strconv.Itoa(int(cube_y)))
 		}
 	} else if rl.IsKeyPressed(rl.KeyM) {
 		if isOpenedMenu {
@@ -101,6 +101,10 @@ func input() {
 			isOpenedInventory = false
 			isOpenedMenu = true
 		}
+	} else if rl.IsKeyPressed(rl.KeyP) {
+		saveCurrentLevel("level#1.txt")
+	} else if rl.IsKeyPressed(rl.KeyF2) {
+		openSaveOfLevel("level#1.txt")
 	}
 
 	if current_slot == 0 {
