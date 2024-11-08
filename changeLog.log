@@ -1,23 +1,4 @@
-[22:22:15]Logger has created/opened
-[22:22:15]Window has successfully initialized
-[22:22:15]CameraManager has initialized
-[22:22:15]FramesPerSecond set to 120
-[22:22:15]Map successfully created
-[22:22:15]Game has successfully created
-[22:22:15]Game has going to update part
-[22:22:22]setting up of new block in inventory
-[22:22:22]Set current slot to 0
-[22:22:23]Set new block at: 7, 1
-[22:22:23]Set new block at: 9, 2
-[22:22:24]Set new block at: 7, 3
-[22:22:24]Set new block at: 7, 3
-[22:22:24]Set new block at: 7, 1
-[22:22:25]Set new block at: 6, 4
-[22:22:25]Set new block at: 8, 1
-[22:22:25]Set new block at: 6, 2
-[22:22:27]Set current slot to 1
-[22:22:27]Set current slot to 0
-[22:22:27]Set current slot to 1
-[22:22:28]Set current slot to 0
-[22:22:34]Game has been closed
-[22:22:34]Game has closed
+[20:20:28]Logger has created/opened
+[20:20:28]Window has successfully initialized
+[20:20:28]FramesPerSecond set to 120
+[20:20:28]Map successfully created

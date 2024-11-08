@@ -6,7 +6,8 @@ import (
 	"strconv"
 )
 
-func InitWindowOfGame() {
+func InitWindowOfGame(wn string) {
+	WorldName = wn
 
 	SetNewLog("Setting up logger")
 	file, err := os.Create("changeLog.log")
@@ -24,7 +25,11 @@ func InitWindowOfGame() {
 	rl.SetTargetFPS(TARGET_FPS)
 	SetNewLog("FramesPerSecond set to " + strconv.Itoa(int(TARGET_FPS)))
 
-	CreateMap()
-	SetNewLog("Map successfully created")
+	if !IsAlredyGenerated {
+		CreateMap()
+		SetNewLog("Map successfully created")
+	} else {
+		SetNewLog("World already opened")
+	}
 
 }

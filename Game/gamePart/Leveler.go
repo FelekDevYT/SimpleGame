@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-func saveCurrentLevel(filename string) {
-	file, err := os.OpenFile(filename, os.O_RDWR|os.O_CREATE, 0666)
+func SaveCurrentLevel() {
+	file, err := os.OpenFile((WorldName + "#1"), os.O_RDWR|os.O_CREATE, 0666)
 	if err != nil {
 		SetNewLog("Failed to save current level")
 	}
@@ -19,11 +19,11 @@ func saveCurrentLevel(filename string) {
 		}
 	}
 
-	SetNewLog("Saved current level to " + filename)
+	SetNewLog("Saved current level to " + (WorldName + "#1"))
 }
 
-func openSaveOfLevel(filename string) {
-	level, err := os.ReadFile(filename)
+func OpenSaveOfLevel() {
+	level, err := os.ReadFile((WorldName + "#1"))
 	if err != nil {
 		SetNewLog("Failed to open current level")
 		return

@@ -31,7 +31,9 @@ var (
 	inventory         [7]rune = [7]rune{
 		7, 7, 7, 7, 7, 7, 7,
 	}
-	iron    []rune = []rune{0, 5, 0, 5}
-	gold    []rune = []rune{0, 9, 0, 9}
-	diamond []rune = []rune{0, 12, 0, 12}
+	iron              []rune = []rune{0, 5, 0, 5}
+	gold              []rune = []rune{0, 9, 0, 9}
+	diamond           []rune = []rune{0, 12, 0, 12}
+	WorldName                = "newWorld"
+	IsAlredyGenerated        = false
 )

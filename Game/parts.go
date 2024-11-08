@@ -2,6 +2,8 @@ package main
 
 import (
 	rl "github.com/gen2brain/raylib-go/raylib"
+	"github.com/martinlindhe/inputbox"
+	"github.com/tawesoft/golib/v2/dialog"
 	"helloApp/Game/gamePart"
 	"helloApp/Game/logoPart"
 	"os"
@@ -23,8 +25,9 @@ func LoadScreen() {
 
 		switch logoPart.Input() {
 		case 1:
+			gamePart.MAP = [10000][10000]rune{}
 			rl.CloseWindow()
-			gameScreen()
+			selectWorldType()
 		case 2:
 			rl.CloseWindow()
 			os.Exit(0)
@@ -41,8 +44,73 @@ func LoadScreen() {
 
 }
 
+func selectWorldType() {
+	gamePart.InitWindowOfGame("world")
+
+	gamePart.CreateMap()
+
+	for !rl.WindowShouldClose() {
+		rl.BeginDrawing()
+
+		gamePart.DrawMap()
+
+		rl.DrawText("Select the option", 180, 100, 90, rl.Black)
+
+		rl.DrawRectangle(gamePart.SCREEN_WIDTH/4+15, 300, 500, 100, rl.Black)
+		rl.DrawText("New world", gamePart.SCREEN_WIDTH/4+220, 330, 40, rl.White)
+
+		rl.DrawRectangle(gamePart.SCREEN_WIDTH/4+15, 450, 500, 100, rl.Black)
+		rl.DrawText("Open world", gamePart.SCREEN_WIDTH/4+220, 480, 40, rl.White)
+
+		rl.DrawRectangle(gamePart.SCREEN_WIDTH/4+15, 600, 500, 100, rl.Black)
+		rl.DrawText("Back", gamePart.SCREEN_WIDTH/4+220, 630, 40, rl.White)
+
+		if rl.IsMouseButtonDown(rl.MouseButtonLeft) {
+			if rl.GetMouseX() >= gamePart.SCREEN_WIDTH/4+15 && rl.GetMouseX() <= gamePart.SCREEN_WIDTH/4+15+500 && rl.GetMouseY() >= 300 && rl.GetMouseY() <= 400 && rl.GetMouseY() <= 400 {
+				//CREATING NEW LEVEL
+				name, ok := inputbox.InputBox("Select world name", "Enter valid world name", "new world")
+
+				if ok {
+					rl.CloseWindow()
+					gameScreen(name)
+				} else {
+					dialog.Alert("Enter valid name and press 'ok' button")
+				}
+			} else if rl.GetMouseX() >= gamePart.SCREEN_WIDTH/4+15 && rl.GetMouseX() <= gamePart.SCREEN_WIDTH/4+15+500 && rl.GetMouseY() >= 450 && rl.GetMouseY() <= 550 {
+				//OPENING LEVEL
+				name, ok := inputbox.InputBox("Enter world name", "Enter valid world name", "world#1")
+
+				if ok {
+					gamePart.IsAlredyGenerated = true
+					gamePart.WorldName = name
+					gamePart.OpenSaveOfLevel()
+					rl.CloseWindow()
+					gameScreen(name)
+				} else {
+					dialog.Alert("Enter valid name and press 'ok' button")
+				}
+			} else if rl.GetMouseX() >= gamePart.SCREEN_WIDTH/4+15 && rl.GetMouseX() <= gamePart.SCREEN_WIDTH/4+15+500 && rl.GetMouseY() >= 600 && rl.GetMouseY() <= 700 {
+				gamePart.MAP = [10000][10000]rune{}
+				rl.CloseWindow()
+				LoadScreen()
+			}
+		}
+
+		rl.EndDrawing()
+	}
+}
+
+// name, ok := inputbox.InputBox("Select world name", "Enter valid world name", "new world")
+//
+// if ok {
+// gamePart.MAP = [10000][10000]rune{}
+// rl.CloseWindow()
+// gameScreen(name)
+// } else {
+// dialog.Alert("Enter valid name and press 'ok' button")
+// }
 func aboutPart() {
-	gamePart.InitWindowOfGame()
+	gamePart.InitWindowOfGame("world")
 
 	gamePart.CreateMap()
 
@@ -75,9 +143,9 @@ func aboutPart() {
 	os.Exit(0)
 }
 
-func gameScreen() {
+func gameScreen(wn string) {
 
-	gamePart.InitWindowOfGame()
+	gamePart.InitWindowOfGame(wn)
 	gamePart.SetNewLog("Game has successfully created")
 
 	gamePart.SetNewLog("Game has going to update part")

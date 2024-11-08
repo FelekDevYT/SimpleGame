@@ -102,9 +102,9 @@ func input() {
 			isOpenedMenu = true
 		}
 	} else if rl.IsKeyPressed(rl.KeyP) {
-		saveCurrentLevel("level#1.txt")
+		SaveCurrentLevel()
 	} else if rl.IsKeyPressed(rl.KeyF2) {
-		openSaveOfLevel("level#1.txt")
+		OpenSaveOfLevel()
 	}
 
 	if current_slot == 0 {
