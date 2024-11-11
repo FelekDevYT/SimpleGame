@@ -43,6 +43,16 @@ func Update() {
 	}
 
 	rl.EndDrawing()
+
+	//UPDATE LUA
+
+	for _, folder := range ModPaths {
+		LuaInt.DoFile(folder + "\\run.lua")
+	}
+
+	//CLEARING UP CHASE OF EVENTS
+
+	clearAndSetDisable(&api)
 }
 
 func playerReffer() {

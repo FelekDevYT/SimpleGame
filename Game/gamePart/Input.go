@@ -93,6 +93,10 @@ func input() {
 			MAP[cube_x][cube_y] = inventory[current_slot]
 
 			SetNewLog("Set new block at: " + strconv.Itoa(int(cube_x)) + ", " + strconv.Itoa(int(cube_y)))
+
+			setEnable(&api, 0)
+			api.isBlockSet.cords.x = cube_x
+			api.isBlockSet.cords.y = cube_y
 		}
 	} else if rl.IsKeyPressed(rl.KeyM) {
 		if isOpenedMenu {

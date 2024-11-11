@@ -6,10 +6,36 @@ import (
 	"github.com/tawesoft/golib/v2/dialog"
 	"helloApp/Game/gamePart"
 	"helloApp/Game/logoPart"
+	"io/ioutil"
 	"os"
+	"path/filepath"
 )
 
+func getDirectories(dirPath string) []string {
+	var folders []string
+
+	entries, _ := ioutil.ReadDir(dirPath)
+
+	for _, entry := range entries {
+		if entry.IsDir() {
+			folders = append(folders, filepath.Join(dirPath, entry.Name()))
+		}
+	}
+
+	return folders
+}
+
 func LoadScreen() {
+
+	folders := getDirectories("mods")
+
+	a := 0
+	for _, folder := range folders {
+		gamePart.ModPaths[a] = folder
+	}
+
+	gamePart.SetNewLog("Setting up mods folders")
+
 	rl.InitWindow(gamePart.SCREEN_WIDTH, gamePart.SCREEN_HEIGHT, gamePart.SCREEN_TITLE)
 	rl.SetTargetFPS(gamePart.TARGET_FPS)
 
@@ -149,6 +175,8 @@ func gameScreen(wn string) {
 	gamePart.SetNewLog("Game has successfully created")
 
 	gamePart.SetNewLog("Game has going to update part")
+
+	defer gamePart.LuaInt.Close()
 
 	for !rl.WindowShouldClose() {
 		gamePart.Update()

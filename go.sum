@@ -54,6 +54,8 @@ github.com/tawesoft/golib/v2 v2.16.0 h1:QJPqTFPVz++45fTVyP66o8IfCfz8MYgTrn6nypVL
 github.com/tawesoft/golib/v2 v2.16.0/go.mod h1:S+cpYdLd1NwKQmWnycfIJqJegOek/Zz+JY9FH7EJTWs=
 github.com/webview/webview v0.0.0-20241010173727-c5b19403382e h1:4bkZ1tk9dZYyah8K5VAoA/Bm0HkkGYxezIwHZ4iN5WQ=
 github.com/webview/webview v0.0.0-20241010173727-c5b19403382e/go.mod h1:Zk81X+8/mp/MNoeJXXK4Noydn8pcea09e00dFfAwrxg=
+github.com/yuin/gopher-lua v1.1.1 h1:kYKnWBjvbNP4XLT3+bPEwAXJx262OhaHDWDVOPjL46M=
+github.com/yuin/gopher-lua v1.1.1/go.mod h1:GBR0iDaNXjAgGg9zfCvksxSRnQx76gclCIb7kdAd1Pw=
 golang.org/x/crypto v0.0.0-20180214000028-650f4a345ab4/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=

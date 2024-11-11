@@ -14,6 +14,7 @@ require (
 	github.com/martinlindhe/inputbox v0.0.0-20210326232244-b26136a79ad0 // indirect
 	github.com/tawesoft/golib/v2 v2.16.0 // indirect
 	github.com/webview/webview v0.0.0-20241010173727-c5b19403382e // indirect
+	github.com/yuin/gopher-lua v1.1.1 // indirect
 	golang.org/x/exp v0.0.0-20240707233637-46b078467d37 // indirect
 	golang.org/x/sys v0.22.0 // indirect
 	golang.org/x/text v0.16.0 // indirect

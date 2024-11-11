@@ -1,6 +1,9 @@
 package gamePart
 
-import rl "github.com/gen2brain/raylib-go/raylib"
+import (
+	rl "github.com/gen2brain/raylib-go/raylib"
+	lua "github.com/yuin/gopher-lua"
+)
 
 const (
 	SCREEN_WIDTH  rune = 1150
@@ -11,6 +14,7 @@ const (
 )
 
 var (
+	api      GameAPIEvents
 	PLAYER_X = 100
 	PLAYER_Y = 100
 	MAP      [10000][10000]rune
@@ -36,4 +40,6 @@ var (
 	diamond           []rune = []rune{0, 12, 0, 12}
 	WorldName                = "newWorld"
 	IsAlredyGenerated        = false
+	LuaInt                   = lua.NewState()
+	ModPaths                 = [1024]string{}
 )

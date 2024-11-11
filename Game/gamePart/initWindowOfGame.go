@@ -2,6 +2,7 @@ package gamePart
 
 import (
 	rl "github.com/gen2brain/raylib-go/raylib"
+	lua "github.com/yuin/gopher-lua"
 	"os"
 	"strconv"
 )
@@ -10,14 +11,15 @@ func InitWindowOfGame(wn string) {
 	WorldName = wn
 
 	SetNewLog("Setting up logger")
-	file, err := os.Create("changeLog.log")
-	if err != nil {
-		println(err.Error())
-		SetNewLog("Error of setting up logger")
-		os.Exit(1)
-	}
+	file, _ := os.Create("changeLog.log")
+
 	defer file.Close()
 	SetNewLog("Logger has created/opened")
+
+	SetNewLog("Setting up window icon...")
+	img := rl.LoadImage("assets/logo.png")
+	rl.SetWindowIcon(*img)
+	SetNewLog("Successfully loaded logo.png")
 
 	rl.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
 	SetNewLog("Window has successfully initialized")
@@ -32,4 +34,12 @@ func InitWindowOfGame(wn string) {
 		SetNewLog("World already opened")
 	}
 
+	SetNewLog("Setting up Lua Interpreter...")
+	LuaInt = lua.NewState()
+	LuaInt.PreloadModule("api", Loader)
+
+	SetNewLog("Setting default value to EVENTS")
+	clearAndSetDisable(&api)
+
+	api.WorldEvent.isWorldAlreadyOpened = true
 }
