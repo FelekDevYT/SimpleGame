@@ -14,4 +14,7 @@ func UpdateLogoScreen() {
 
 	rl.DrawRectangle(gamePart.SCREEN_WIDTH/4+15, 600, 500, 100, rl.Black)
 	rl.DrawText("Quit", gamePart.SCREEN_WIDTH/4+220, 630, 40, rl.White)
+
+	rl.DrawRectangle(gamePart.SCREEN_WIDTH/4+535, 600, 100, 100, rl.Black)
+	rl.DrawText("Mods", gamePart.SCREEN_WIDTH/4+545, 630, 35, rl.White)
 }

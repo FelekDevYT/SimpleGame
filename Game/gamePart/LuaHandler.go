@@ -16,8 +16,8 @@ func Loader(L *lua.LState) int {
 
 func WorldEventLoader(L *lua.LState) map[string]lua.LGFunction {
 	return map[string]lua.LGFunction{
-		"isWorldQuitting": func(L *lua.LState) int {
-			L.Push(lua.LBool(api.WorldEvent.isQuitting))
+		"isWorldAlreadyOpened": func(L *lua.LState) int {
+			L.Push(lua.LBool(api.WorldEvent.isWorldAlreadyOpened))
 			return 1
 		},
 	}

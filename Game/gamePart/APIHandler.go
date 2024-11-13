@@ -1,5 +1,12 @@
 package gamePart
 
+import (
+	"encoding/json"
+	"io/ioutil"
+	"log"
+	"os"
+)
+
 type VEC2 struct {
 	x rune
 	y rune
@@ -35,4 +42,29 @@ func setEnable(api *GameAPIEvents, typeOfEvent rune) {
 		api.isBlockSet.isActive = true
 		break
 	}
+}
+
+//THE UP LEVEL FUNCS
+
+type Mod struct {
+	ID          string `json:"id"`
+	Version     string `json:"version"`
+	Creator     string `json:"creator"`
+	Description string `json:"description"`
+}
+
+func GetModInfo(modpath string) Mod {
+	// Открываем JSON файл
+	file, _ := os.Open(modpath + "\\mod.json")
+	defer file.Close()
+
+	// Читаем содержимое файла
+	byteValue, _ := ioutil.ReadAll(file)
+
+	// Декодируем JSON в структуру
+	var mod Mod
+	if err := json.Unmarshal(byteValue, &mod); false {
+		log.Fatalf("Ошибка при парсинге JSON: %v", err)
+	}
+	return mod
 }

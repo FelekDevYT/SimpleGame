@@ -25,6 +25,14 @@ func getDirectories(dirPath string) []string {
 	return folders
 }
 
+/*
+	ModsButton = gui.Button(rl.Rectangle{float32(gamePart.SCREEN_WIDTH/4 + 15 + 500 + 20), 600, 100, 100}, "Mods")
+
+	PlayButton = gui.Button(rl.Rectangle{float32(gamePart.SCREEN_WIDTH/4 + 15), 300, 500, 100}, "Play")
+	AboutButton = gui.Button(rl.Rectangle{float32(gamePart.SCREEN_WIDTH/4 + 15), 450, 500, 100}, "About")
+	QuitButton = gui.Button(rl.Rectangle{float32(gamePart.SCREEN_WIDTH)/4 + 14, 600, 500, 100}, "Quit")
+*/
+
 func LoadScreen() {
 
 	folders := getDirectories("mods")
@@ -61,6 +69,10 @@ func LoadScreen() {
 			gamePart.MAP = [10000][10000]rune{}
 			rl.CloseWindow()
 			aboutPart()
+		case 4:
+			gamePart.MAP = [10000][10000]rune{}
+			rl.CloseWindow()
+			ModsPagePart()
 		}
 
 		rl.EndDrawing()
@@ -68,6 +80,24 @@ func LoadScreen() {
 
 	gamePart.MAP = [10000][10000]rune{}
 
+}
+
+func ModsPagePart() {
+	gamePart.InitWindowOfGame("world")
+
+	gamePart.CreateMap()
+
+	for !rl.WindowShouldClose() {
+		rl.BeginDrawing()
+
+		gamePart.DrawMap()
+
+		rl.DrawRectangle(550, 100, 500, 600, rl.White)
+
+		ModsPage()
+
+		rl.EndDrawing()
+	}
 }
 
 func selectWorldType() {
