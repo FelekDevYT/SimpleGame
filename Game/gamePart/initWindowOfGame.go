@@ -16,13 +16,13 @@ func InitWindowOfGame(wn string) {
 	defer file.Close()
 	SetNewLog("Logger has created/opened")
 
+	rl.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
+	SetNewLog("Window has successfully initialized")
+
 	SetNewLog("Setting up window icon...")
 	img := rl.LoadImage("assets/logo.png")
 	rl.SetWindowIcon(*img)
 	SetNewLog("Successfully loaded logo.png")
-
-	rl.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
-	SetNewLog("Window has successfully initialized")
 
 	rl.SetTargetFPS(TARGET_FPS)
 	SetNewLog("FramesPerSecond set to " + strconv.Itoa(int(TARGET_FPS)))

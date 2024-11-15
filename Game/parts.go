@@ -45,14 +45,15 @@ func LoadScreen() {
 	gamePart.SetNewLog("Setting up mods folders")
 
 	rl.InitWindow(gamePart.SCREEN_WIDTH, gamePart.SCREEN_HEIGHT, gamePart.SCREEN_TITLE)
-	rl.SetTargetFPS(gamePart.TARGET_FPS)
+	img := rl.LoadTexture("assets\\screen.png")
 
-	gamePart.CreateMap()
+	icon := rl.LoadImage("assets/logo.png")
+	rl.SetWindowIcon(*icon)
 
 	for !rl.WindowShouldClose() {
 		rl.BeginDrawing()
 
-		gamePart.DrawMap()
+		rl.DrawTexture(img, 0, 0, rl.White)
 		rl.DrawText("Game by FelsStudio 0.0.1", 15, 100, 90, rl.Black)
 
 		logoPart.UpdateLogoScreen()
@@ -83,14 +84,13 @@ func LoadScreen() {
 }
 
 func ModsPagePart() {
-	gamePart.InitWindowOfGame("world")
-
-	gamePart.CreateMap()
+	rl.InitWindow(gamePart.SCREEN_WIDTH, gamePart.SCREEN_HEIGHT, gamePart.SCREEN_TITLE)
+	img := rl.LoadTexture("assets\\screen.png")
 
 	for !rl.WindowShouldClose() {
 		rl.BeginDrawing()
 
-		gamePart.DrawMap()
+		rl.DrawTexture(img, 0, 0, rl.White)
 
 		rl.DrawRectangle(550, 100, 500, 600, rl.White)
 
@@ -98,17 +98,18 @@ func ModsPagePart() {
 
 		rl.EndDrawing()
 	}
+
+	rl.UnloadTexture(img)
 }
 
 func selectWorldType() {
-	gamePart.InitWindowOfGame("world")
-
-	gamePart.CreateMap()
+	rl.InitWindow(gamePart.SCREEN_WIDTH, gamePart.SCREEN_HEIGHT, gamePart.SCREEN_TITLE)
+	img := rl.LoadTexture("assets\\screen.png")
 
 	for !rl.WindowShouldClose() {
 		rl.BeginDrawing()
 
-		gamePart.DrawMap()
+		rl.DrawTexture(img, 0, 0, rl.White)
 
 		rl.DrawText("Select the option", 180, 100, 90, rl.Black)
 
@@ -128,6 +129,7 @@ func selectWorldType() {
 
 				if ok {
 					rl.CloseWindow()
+					gamePart.WorldName = name
 					gameScreen(name)
 				} else {
 					dialog.Alert("Enter valid name and press 'ok' button")
@@ -154,6 +156,7 @@ func selectWorldType() {
 
 		rl.EndDrawing()
 	}
+	rl.UnloadTexture(img)
 }
 
 // name, ok := inputbox.InputBox("Select world name", "Enter valid world name", "new world")
@@ -166,14 +169,13 @@ func selectWorldType() {
 // dialog.Alert("Enter valid name and press 'ok' button")
 // }
 func aboutPart() {
-	gamePart.InitWindowOfGame("world")
-
-	gamePart.CreateMap()
+	rl.InitWindow(gamePart.SCREEN_WIDTH, gamePart.SCREEN_HEIGHT, gamePart.SCREEN_TITLE)
+	img := rl.LoadTexture("assets\\screen.png")
 
 	for !rl.WindowShouldClose() {
 		rl.BeginDrawing()
 
-		gamePart.DrawMap()
+		rl.DrawTexture(img, 0, 0, rl.White)
 
 		rl.DrawText("Game by FelsStudio 0.0.1", 15, 100, 90, rl.Black)
 		rl.DrawText("Game has first created in 18.07.2024", 250, 200, 40, rl.Black)
@@ -194,6 +196,7 @@ func aboutPart() {
 
 		rl.EndDrawing()
 	}
+	rl.UnloadTexture(img)
 
 	rl.CloseWindow()
 	os.Exit(0)

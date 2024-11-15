@@ -112,19 +112,19 @@ func input() {
 	}
 
 	if current_slot == 0 {
-		renderCubeInCurrentPositionOnInventory(380, SCREEN_HEIGHT-80, getInventoryColor(inventory[0]))
+		renderCubeInCurrentPositionOfInventory(380, SCREEN_HEIGHT-80, getInventoryColor(inventory[0]))
 	} else if current_slot == 1 {
-		renderCubeInCurrentPositionOnInventory(430, SCREEN_HEIGHT-80, getInventoryColor(inventory[1]))
+		renderCubeInCurrentPositionOfInventory(430, SCREEN_HEIGHT-80, getInventoryColor(inventory[1]))
 	} else if current_slot == 2 {
-		renderCubeInCurrentPositionOnInventory(480, SCREEN_HEIGHT-80, getInventoryColor(inventory[2]))
+		renderCubeInCurrentPositionOfInventory(480, SCREEN_HEIGHT-80, getInventoryColor(inventory[2]))
 	} else if current_slot == 3 {
-		renderCubeInCurrentPositionOnInventory(530, SCREEN_HEIGHT-80, getInventoryColor(inventory[3]))
+		renderCubeInCurrentPositionOfInventory(530, SCREEN_HEIGHT-80, getInventoryColor(inventory[3]))
 	} else if current_slot == 4 {
-		renderCubeInCurrentPositionOnInventory(580, SCREEN_HEIGHT-80, getInventoryColor(inventory[4]))
+		renderCubeInCurrentPositionOfInventory(580, SCREEN_HEIGHT-80, getInventoryColor(inventory[4]))
 	} else if current_slot == 5 {
-		renderCubeInCurrentPositionOnInventory(630, SCREEN_HEIGHT-80, getInventoryColor(inventory[5]))
+		renderCubeInCurrentPositionOfInventory(630, SCREEN_HEIGHT-80, getInventoryColor(inventory[5]))
 	} else if current_slot == 6 {
-		renderCubeInCurrentPositionOnInventory(680, SCREEN_HEIGHT-80, getInventoryColor(inventory[6]))
+		renderCubeInCurrentPositionOfInventory(680, SCREEN_HEIGHT-80, getInventoryColor(inventory[6]))
 	}
 
 }

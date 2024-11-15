@@ -16,7 +16,7 @@ func renderCube(x rune, y rune, color rl.Color) {
 	rl.DrawLine(x+CUBE_SIZE, y, x+CUBE_SIZE, y+CUBE_SIZE, rl.Gray)
 }
 
-func renderCubeInCurrentPositionOnInventory(x rune, y rune, color rl.Color) {
+func renderCubeInCurrentPositionOfInventory(x rune, y rune, color rl.Color) {
 	rl.DrawRectangle(x, y, CUBE_SIZE, CUBE_SIZE, color)
 	rl.SetLineWidth(3)
 	rl.DrawLine(x, y, x+CUBE_SIZE, y, rl.Blue)
@@ -52,24 +52,8 @@ func getDefaultIndex(idx rune) int {
 	return int(idx - 1)
 }
 
-func isWorldBorderInLeft(i rune) rune {
-	if i == 1 {
-		return 0
-	} else {
-		return i - 1
-	}
-}
-
 func random(min, max int) int {
 	return rand.IntN(max-min) + min
-}
-
-func isLeftBorder(i rune) bool {
-	if i == 0 {
-		return true
-	} else {
-		return false
-	}
 }
 
 func drawInventory() {

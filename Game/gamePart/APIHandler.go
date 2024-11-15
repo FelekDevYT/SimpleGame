@@ -55,7 +55,7 @@ type Mod struct {
 
 func GetModInfo(modpath string) Mod {
 	// Открываем JSON файл
-	file, _ := os.Open(modpath + "\\mod.json")
+	file, _ := os.Open(modpath + "\\mod.json") //https://open.spotify.com/playlist/2X1mh4DY0PSJEJ9DY0j6RH?si=dYMelAP-Szq8yh2s1oQrqg
 	defer file.Close()
 
 	// Читаем содержимое файла

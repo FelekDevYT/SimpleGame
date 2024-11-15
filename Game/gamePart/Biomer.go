@@ -5,7 +5,7 @@ func plains() {
 
 	for i := 0; rune(i) < (SCREEN_WIDTH / CUBE_SIZE); i++ {
 		for points[i] == 0 {
-			points[i] = getIndex(rune(random(10, 12))) // - new
+			points[i] = getIndex(rune(random(10, 14))) // - new
 		}
 	}
 
