@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	SCREEN_WIDTH  rune = 1150
+	SCREEN_WIDTH  rune = 1150 //1150
 	SCREEN_HEIGHT rune = 800
 	SCREEN_TITLE       = "Game"
 	TARGET_FPS         = 120

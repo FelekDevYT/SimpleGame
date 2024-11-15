@@ -45,7 +45,7 @@ func LoadScreen() {
 	gamePart.SetNewLog("Setting up mods folders")
 
 	rl.InitWindow(gamePart.SCREEN_WIDTH, gamePart.SCREEN_HEIGHT, gamePart.SCREEN_TITLE)
-	img := rl.LoadTexture("assets\\screen.png")
+	img := rl.LoadTexture("assets/screen.png")
 
 	icon := rl.LoadImage("assets/logo.png")
 	rl.SetWindowIcon(*icon)
@@ -85,7 +85,10 @@ func LoadScreen() {
 
 func ModsPagePart() {
 	rl.InitWindow(gamePart.SCREEN_WIDTH, gamePart.SCREEN_HEIGHT, gamePart.SCREEN_TITLE)
-	img := rl.LoadTexture("assets\\screen.png")
+	img := rl.LoadTexture("assets/screen.png")
+
+	image := rl.LoadImage("assets/logo.png")
+	rl.SetWindowIcon(*image)
 
 	for !rl.WindowShouldClose() {
 		rl.BeginDrawing()
@@ -93,6 +96,20 @@ func ModsPagePart() {
 		rl.DrawTexture(img, 0, 0, rl.White)
 
 		rl.DrawRectangle(550, 100, 500, 600, rl.White)
+
+		//DRAWING THE BUTTON TO EXIT
+
+		rl.DrawRectangle(1050, 0, 70, 70, rl.Black)
+		rl.DrawText("Back", 1060, 10, 20, rl.White)
+
+		if rl.GetMouseX() >= 1050 && rl.GetMouseX() <= 1050+70 && rl.GetMouseY() >= 0 && rl.GetMouseY() <= 70 {
+			if rl.IsMouseButtonPressed(rl.MouseLeftButton) {
+				rl.CloseWindow()
+				LoadScreen()
+			}
+		}
+
+		//
 
 		ModsPage()
 
@@ -104,7 +121,10 @@ func ModsPagePart() {
 
 func selectWorldType() {
 	rl.InitWindow(gamePart.SCREEN_WIDTH, gamePart.SCREEN_HEIGHT, gamePart.SCREEN_TITLE)
-	img := rl.LoadTexture("assets\\screen.png")
+	img := rl.LoadTexture("assets/screen.png")
+
+	image := rl.LoadImage("assets/logo.png")
+	rl.SetWindowIcon(*image)
 
 	for !rl.WindowShouldClose() {
 		rl.BeginDrawing()
@@ -170,7 +190,10 @@ func selectWorldType() {
 // }
 func aboutPart() {
 	rl.InitWindow(gamePart.SCREEN_WIDTH, gamePart.SCREEN_HEIGHT, gamePart.SCREEN_TITLE)
-	img := rl.LoadTexture("assets\\screen.png")
+	img := rl.LoadTexture("assets/screen.png")
+
+	image := rl.LoadImage("assets/logo.png")
+	rl.SetWindowIcon(*image)
 
 	for !rl.WindowShouldClose() {
 		rl.BeginDrawing()
