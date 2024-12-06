@@ -42,4 +42,10 @@ func InitWindowOfGame(wn string) {
 	clearAndSetDisable(&api)
 
 	api.WorldEvent.isWorldAlreadyOpened = true
+
+	//INIT LUA MOD DATA'S
+
+	for _, folder := range ModPaths {
+		LuaInt.DoFile(folder + "\\pre_run.lua")
+	}
 }

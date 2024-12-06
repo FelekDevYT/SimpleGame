@@ -54,34 +54,16 @@ func input() {
 			}
 		}
 		if isOpenedInventory {
-			if rl.GetMouseX() >= 360 && rl.GetMouseX() <= 410 && rl.GetMouseY() >= SCREEN_HEIGHT-380 && rl.GetMouseY() <= SCREEN_HEIGHT-330 {
-				inventory[current_slot] = 0
-				current_slot++
-				SetNewLog("setting up of new block in inventory")
-			} else if rl.GetMouseX() >= 410 && rl.GetMouseX() <= 460 && rl.GetMouseY() >= SCREEN_HEIGHT-380 && rl.GetMouseY() <= SCREEN_HEIGHT-330 {
-				inventory[current_slot] = 1
-				current_slot++
-				SetNewLog("setting up of new block in inventory")
-			} else if rl.GetMouseX() >= 460 && rl.GetMouseX() <= 510 && rl.GetMouseY() >= SCREEN_HEIGHT-380 && rl.GetMouseY() <= SCREEN_HEIGHT-330 {
-				inventory[current_slot] = 2
-				current_slot++
-				SetNewLog("setting up of new block in inventory")
-			} else if rl.GetMouseX() >= 510 && rl.GetMouseX() <= 560 && rl.GetMouseY() >= SCREEN_HEIGHT-380 && rl.GetMouseY() <= SCREEN_HEIGHT-330 {
-				inventory[current_slot] = 3
-				current_slot++
-				SetNewLog("setting up of new block in inventory")
-			} else if rl.GetMouseX() >= 560 && rl.GetMouseX() <= 610 && rl.GetMouseY() >= SCREEN_HEIGHT-380 && rl.GetMouseY() <= SCREEN_HEIGHT-330 {
-				inventory[current_slot] = 4
-				current_slot++
-				SetNewLog("setting up of new block in inventory")
-			} else if rl.GetMouseX() >= 610 && rl.GetMouseX() <= 660 && rl.GetMouseY() >= SCREEN_HEIGHT-380 && rl.GetMouseY() <= SCREEN_HEIGHT-330 {
-				inventory[current_slot] = 5
-				current_slot++
-				SetNewLog("setting up of new block in inventory")
-			} else if rl.GetMouseX() >= 660 && rl.GetMouseX() <= 710 && rl.GetMouseY() >= SCREEN_HEIGHT-380 && rl.GetMouseY() <= SCREEN_HEIGHT-330 {
-				inventory[current_slot] = 6
-				current_slot++
-				SetNewLog("setting up of new block in inventory")
+			for i := 0; i != 7; i += 1 {
+				if rl.GetMouseX() >= int32(360+(50*i)) &&
+					rl.GetMouseX() <= int32(410+(50*i)) &&
+					rl.GetMouseY() >= SCREEN_HEIGHT-380 &&
+					rl.GetMouseY() <= SCREEN_HEIGHT-330 &&
+					rl.IsMouseButtonPressed(rl.MouseLeftButton) {
+					inventory[current_slot] = rune(i)
+					current_slot++
+					SetNewLog("Setting up of new block in inventory")
+				}
 			}
 		} else {
 			x := rl.GetMouseX()

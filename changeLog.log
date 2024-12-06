@@ -1,25 +1,12 @@
-[23:23:06]Logger has created/opened
-[23:23:06]Window has successfully initialized
-[23:23:06]Setting up window icon...
-[23:23:06]Successfully loaded logo.png
-[23:23:06]FramesPerSecond set to 120
-[23:23:06]Map successfully created
-[23:23:06]Setting up Lua Interpreter...
-[23:23:06]Setting default value to EVENTS
-[23:23:06]Game has successfully created
-[23:23:06]Game has going to update part
-[23:23:42]Setting up mods folders
-[23:23:56]Setting up mods folders
-[23:23:09]Setting up mods folders
-[23:23:10]Setting up mods folders
-[23:23:24]Setting up mods folders
-[23:23:05]Setting up mods folders
-[23:23:58]Setting up mods folders
-[23:23:03]Setting up mods folders
-[23:23:40]Setting up mods folders
-[23:23:22]Setting up mods folders
-[23:23:47]Setting up mods folders
-[23:23:50]Setting up mods folders
-[23:23:52]Setting up mods folders
-[23:23:54]Setting up mods folders
-[23:23:57]Setting up mods folders
+[22:22:11]Logger has created/opened
+[22:22:11]Window has successfully initialized
+[22:22:11]Setting up window icon...
+[22:22:11]Successfully loaded logo.png
+[22:22:11]FramesPerSecond set to 120
+[22:22:11]Map successfully created
+[22:22:11]Setting up Lua Interpreter...
+[22:22:11]Setting default value to EVENTS
+[22:22:11]Game has successfully created
+[22:22:11]Game has going to update part
+[22:22:24]Game has been closed
+[22:22:24]Game has closed

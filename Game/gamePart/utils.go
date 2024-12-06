@@ -87,7 +87,8 @@ func getInventoryColor(color rune) rl.Color {
 	case 7:
 		return colors["TRANSPARENT"]
 	default:
-		panic("Not found color")
+		return colors["TRANSPARENT"]
+		//panic("Not found color"//OLD
 	}
 }
 

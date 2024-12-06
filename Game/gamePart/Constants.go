@@ -5,6 +5,15 @@ import (
 	lua "github.com/yuin/gopher-lua"
 )
 
+type BLOCK struct {
+	ID  string
+	col rl.Color
+}
+
+type MOD_DATA_GENERATES struct {
+	blocks [24]BLOCK
+}
+
 const (
 	SCREEN_WIDTH  rune = 1150 //1150
 	SCREEN_HEIGHT rune = 800
@@ -35,11 +44,12 @@ var (
 	inventory         [7]rune = [7]rune{
 		7, 7, 7, 7, 7, 7, 7,
 	}
-	iron              []rune = []rune{0, 5, 0, 5}
-	gold              []rune = []rune{0, 9, 0, 9}
-	diamond           []rune = []rune{0, 12, 0, 12}
-	WorldName                = "newWorld"
-	IsAlredyGenerated        = false
-	LuaInt                   = lua.NewState()
-	ModPaths                 = [1024]string{}
+	iron               []rune = []rune{0, 5, 0, 5}
+	gold               []rune = []rune{0, 9, 0, 9}
+	diamond            []rune = []rune{0, 12, 0, 12}
+	WorldName                 = "newWorld"
+	IsAlredyGenerated         = false
+	LuaInt                    = lua.NewState()
+	ModPaths                  = [1024]string{}
+	MOD_GENERATED_DATA        = MOD_DATA_GENERATES{}
 )

@@ -30,8 +30,13 @@ func Update() {
 
 	if isOpenedInventory {
 		rl.DrawRectangle(350, SCREEN_HEIGHT-400, 400, 300, rl.Black)
-		for i := 0; i < 7; i++ {
-			renderCube(rune(360+(CUBE_SIZE*i)), SCREEN_HEIGHT-380, getInventoryColor(rune(i)))
+		i := 0
+
+		for j := 0; j < 5; j++ {
+			for r := 0; r < 7; r++ {
+				renderCube(rune(360+(CUBE_SIZE*r)), SCREEN_HEIGHT-(380-((CUBE_SIZE)*rune(j))), getInventoryColor(rune(i)))
+				i++
+			}
 		}
 	}
 
