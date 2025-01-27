@@ -69,7 +69,12 @@ func drawInventory() {
 }
 
 func getInventoryColor(color rune) rl.Color {
-	switch color {
+	l := lastAddedBlockIndex
+	if color < rune(l) {
+		return blocks[color].col
+	}
+	return colors["TRANSPARENT"]
+	/*switch color {
 	case 0:
 		return colors["GRASS"]
 	case 1:
@@ -89,7 +94,7 @@ func getInventoryColor(color rune) rl.Color {
 	default:
 		return colors["TRANSPARENT"]
 		//panic("Not found color"//OLD
-	}
+	}*/
 }
 
 func isOre(lvl []rune) bool {

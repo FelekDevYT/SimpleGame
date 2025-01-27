@@ -6,7 +6,7 @@ import (
 )
 
 type BLOCK struct {
-	ID  string
+	ID  rune
 	col rl.Color
 }
 
@@ -27,7 +27,18 @@ var (
 	PLAYER_X = 100
 	PLAYER_Y = 100
 	MAP      [10000][10000]rune
-	colors   = map[string]rl.Color{
+	blocks   = []BLOCK{
+		{ID: 0, col: rl.Green},
+		{ID: 1, col: rl.SkyBlue},
+		{ID: 2, col: rl.DarkGray},
+		{ID: 3, col: rl.White},
+		{ID: 4, col: rl.NewColor(132, 141, 148, 255)},
+		{ID: 5, col: rl.NewColor(255, 240, 15, 255)},
+		{ID: 6, col: rl.NewColor(54, 171, 186, 255)},
+		//{ID: 7, col: rl.Orange},
+		//{ID: 8, col: rl.Black},
+	}
+	colors = map[string]rl.Color{
 		"GRASS":       rl.NewColor(40, 180, 99, 255),
 		"SKY":         rl.SkyBlue,
 		"STONE":       rl.DarkGray,
@@ -44,12 +55,13 @@ var (
 	inventory         [7]rune = [7]rune{
 		7, 7, 7, 7, 7, 7, 7,
 	}
-	iron               []rune = []rune{0, 5, 0, 5}
-	gold               []rune = []rune{0, 9, 0, 9}
-	diamond            []rune = []rune{0, 12, 0, 12}
-	WorldName                 = "newWorld"
-	IsAlredyGenerated         = false
-	LuaInt                    = lua.NewState()
-	ModPaths                  = [1024]string{}
-	MOD_GENERATED_DATA        = MOD_DATA_GENERATES{}
+	iron                []rune = []rune{0, 5, 0, 5}
+	gold                []rune = []rune{0, 9, 0, 9}
+	diamond             []rune = []rune{0, 12, 0, 12}
+	WorldName                  = "newWorld"
+	IsAlredyGenerated          = false
+	LuaInt                     = lua.NewState()
+	ModPaths                   = [1024]string{}
+	lastAddedBlockIndex        = 6
+	MOD_GENERATED_DATA         = MOD_DATA_GENERATES{}
 )

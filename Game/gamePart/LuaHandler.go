@@ -7,7 +7,8 @@ import (
 func Loader(L *lua.LState) int {
 	//LOAD GENERATED DATA TO ARRRAYS
 	for _, val := range MOD_GENERATED_DATA.blocks {
-		colors[val.ID] = val.col
+		//colors[val.ID] = val.col
+		blocks[val.ID] = BLOCK{ID: val.ID, col: val.col}
 	}
 
 	mod := L.SetFuncs(L.NewTable(), exports)
