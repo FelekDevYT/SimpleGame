@@ -67,7 +67,7 @@ func playerReffer() {
 		PLAYER_X = PLAYER_X - CUBE_SIZE
 	} else if PLAYER_Y >= int(SCREEN_HEIGHT) {
 		PLAYER_Y = PLAYER_Y - CUBE_SIZE
-	} else if PLAYER_Y <= 0+CUBE_SIZE {
+	} else if PLAYER_Y <= -CUBE_SIZE {
 		PLAYER_Y = PLAYER_Y + CUBE_SIZE
 	}
 }
