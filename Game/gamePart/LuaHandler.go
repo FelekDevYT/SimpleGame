@@ -1,6 +1,7 @@
 package gamePart
 
 import (
+	rl "github.com/gen2brain/raylib-go/raylib"
 	lua "github.com/yuin/gopher-lua"
 )
 
@@ -56,6 +57,17 @@ var exports = map[string]lua.LGFunction{
 		X := L.CheckNumber(1)
 		Y := L.CheckNumber(2)
 		L.Push(lua.LNumber(MAP[int(X)][int(Y)].ID))
+		return 1
+	},
+	"addBlock": func(L *lua.LState) int {
+		//Colors
+		R := L.CheckNumber(1)
+		G := L.CheckNumber(2)
+		B := L.CheckNumber(3)
+		newblock := BLOCK{rune(lastAddedBlockIndex), rl.NewColor(uint8(R), uint8(G), uint8(B), 255)}
+		a := append(blocks, newblock)
+		blocks = a
+		lastAddedBlockIndex++
 		return 1
 	},
 	"getBlockEvent": func(L *lua.LState) int {

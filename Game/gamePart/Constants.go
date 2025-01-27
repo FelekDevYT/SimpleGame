@@ -62,6 +62,6 @@ var (
 	IsAlredyGenerated          = false
 	LuaInt                     = lua.NewState()
 	ModPaths                   = [1024]string{}
-	lastAddedBlockIndex        = 6
+	lastAddedBlockIndex        = 7
 	MOD_GENERATED_DATA         = MOD_DATA_GENERATES{}
 )

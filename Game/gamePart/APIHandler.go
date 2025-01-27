@@ -55,7 +55,7 @@ type Mod struct {
 
 func GetModInfo(modpath string) Mod {
 	// Открываем JSON файл
-	file, _ := os.Open(modpath + "\\mod.json") //https://open.spotify.com/playlist/2X1mh4DY0PSJEJ9DY0j6RH?si=dYMelAP-Szq8yh2s1oQrqg
+	file, _ := os.Open(modpath + "\\mod.json")
 	defer file.Close()
 
 	// Читаем содержимое файла
@@ -64,7 +64,7 @@ func GetModInfo(modpath string) Mod {
 	// Декодируем JSON в структуру
 	var mod Mod
 	if err := json.Unmarshal(byteValue, &mod); false {
-		log.Fatalf("Ошибка при парсинге JSON: %v", err)
+		log.Fatalf("Error on JSON parsing : %v", err)
 	}
 	return mod
 }
