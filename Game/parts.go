@@ -60,18 +60,18 @@ func LoadScreen() {
 
 		switch logoPart.Input() {
 		case 1:
-			gamePart.MAP = [10000][10000]rune{}
+			gamePart.MAP = [10000][10000]gamePart.BLOCK{}
 			rl.CloseWindow()
 			selectWorldType()
 		case 2:
 			rl.CloseWindow()
 			os.Exit(0)
 		case 3:
-			gamePart.MAP = [10000][10000]rune{}
+			gamePart.MAP = [10000][10000]gamePart.BLOCK{}
 			rl.CloseWindow()
 			aboutPart()
 		case 4:
-			gamePart.MAP = [10000][10000]rune{}
+			gamePart.MAP = [10000][10000]gamePart.BLOCK{}
 			rl.CloseWindow()
 			ModsPagePart()
 		}
@@ -79,7 +79,7 @@ func LoadScreen() {
 		rl.EndDrawing()
 	}
 
-	gamePart.MAP = [10000][10000]rune{}
+	gamePart.MAP = [10000][10000]gamePart.BLOCK{}
 
 }
 
@@ -168,7 +168,7 @@ func selectWorldType() {
 					dialog.Alert("Enter valid name and press 'ok' button")
 				}
 			} else if rl.GetMouseX() >= gamePart.SCREEN_WIDTH/4+15 && rl.GetMouseX() <= gamePart.SCREEN_WIDTH/4+15+500 && rl.GetMouseY() >= 600 && rl.GetMouseY() <= 700 {
-				gamePart.MAP = [10000][10000]rune{}
+				gamePart.MAP = [10000][10000]gamePart.BLOCK{}
 				rl.CloseWindow()
 				LoadScreen()
 			}
@@ -211,7 +211,7 @@ func aboutPart() {
 
 		if rl.IsMouseButtonPressed(rl.MouseButtonLeft) {
 			if rl.GetMouseX() >= 250 && rl.GetMouseX() <= 750 && rl.GetMouseY() >= 450 && rl.GetMouseY() <= 550 {
-				gamePart.MAP = [10000][10000]rune{}
+				gamePart.MAP = [10000][10000]gamePart.BLOCK{}
 				rl.CloseWindow()
 				LoadScreen()
 			}

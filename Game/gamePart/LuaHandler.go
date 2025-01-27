@@ -55,7 +55,7 @@ var exports = map[string]lua.LGFunction{
 	"get_block": func(L *lua.LState) int {
 		X := L.CheckNumber(1)
 		Y := L.CheckNumber(2)
-		L.Push(lua.LNumber(MAP[int(X)][int(Y)]))
+		L.Push(lua.LNumber(MAP[int(X)][int(Y)].ID))
 		return 1
 	},
 	"getBlockEvent": func(L *lua.LState) int {
@@ -74,6 +74,6 @@ func set_block(L *lua.LState) int {
 	X := L.ToInt(1)
 	Y := L.ToInt(2)
 	TYPE := L.ToInt(3)
-	MAP[X][Y] = rune(TYPE)
+	MAP[X][Y].ID = rune(TYPE)
 	return 0
 }

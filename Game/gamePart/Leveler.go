@@ -15,7 +15,7 @@ func SaveCurrentLevel() {
 	//X Y TYPE
 	for i := 0; i < int(SCREEN_WIDTH); i += CUBE_SIZE {
 		for j := 0; j < int(SCREEN_HEIGHT); j += CUBE_SIZE {
-			file.WriteString(strconv.Itoa(i) + " " + strconv.Itoa(j) + " " + strconv.Itoa(int(MAP[i/CUBE_SIZE][j/CUBE_SIZE])) + "\n")
+			file.WriteString(strconv.Itoa(i) + " " + strconv.Itoa(j) + " " + strconv.Itoa(int(MAP[i/CUBE_SIZE][j/CUBE_SIZE].ID)) + "\n")
 		}
 	}
 
@@ -42,7 +42,7 @@ func OpenSaveOfLevel() {
 					x, _ := strconv.Atoi(parts[0])
 					y, _ := strconv.Atoi(parts[1])
 					t, _ := strconv.Atoi(parts[2])
-					MAP[x/CUBE_SIZE][y/CUBE_SIZE] = rune(t)
+					MAP[x/CUBE_SIZE][y/CUBE_SIZE].ID = rune(t)
 				}
 			}
 			use++

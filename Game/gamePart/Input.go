@@ -72,7 +72,7 @@ func input() {
 			cube_x := x / CUBE_SIZE
 			cube_y := y / CUBE_SIZE
 
-			MAP[cube_x][cube_y] = inventory[current_slot]
+			MAP[cube_x][cube_y].ID = inventory[current_slot]
 
 			SetNewLog("Set new block at: " + strconv.Itoa(int(cube_x)) + ", " + strconv.Itoa(int(cube_y)))
 

@@ -26,7 +26,7 @@ var (
 	api      GameAPIEvents
 	PLAYER_X = 100
 	PLAYER_Y = 100
-	MAP      [10000][10000]rune
+	MAP      [10000][10000]BLOCK
 	blocks   = []BLOCK{
 		{ID: 0, col: rl.Green},
 		{ID: 1, col: rl.SkyBlue},

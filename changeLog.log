@@ -1,18 +1,33 @@
-[20:20:19]Logger has created/opened
-[20:20:19]Window has successfully initialized
-[20:20:19]Setting up window icon...
-[20:20:19]Successfully loaded logo.png
-[20:20:19]FramesPerSecond set to 120
-[20:20:19]Map successfully created
-[20:20:19]Setting up Lua Interpreter...
-[20:20:19]Setting default value to EVENTS
-[20:20:19]Game has successfully created
-[20:20:19]Game has going to update part
-[20:20:19]player change position to UP
-[20:20:19]player change position to UP
-[20:20:19]player change position to UP
-[20:20:20]player change position to UP
-[20:20:20]player change position to UP
-[20:20:20]player change position to UP
-[20:20:21]Game has been closed
-[20:20:21]Game has closed
+[21:21:39]Logger has created/opened
+[21:21:39]Window has successfully initialized
+[21:21:39]Setting up window icon...
+[21:21:39]Successfully loaded logo.png
+[21:21:39]FramesPerSecond set to 120
+[21:21:39]Map successfully created
+[21:21:39]Setting up Lua Interpreter...
+[21:21:39]Setting default value to EVENTS
+[21:21:39]Game has successfully created
+[21:21:39]Game has going to update part
+[21:21:40]player change position to RIGHT
+[21:21:40]player change position to RIGHT
+[21:21:40]player change position to DOWN
+[21:21:42]Setting up of new block in inventory
+[21:21:42]Set current slot to 0
+[21:21:42]Set new block at: 8, 2
+[21:21:43]Set new block at: 7, 3
+[21:21:43]Set new block at: 7, 5
+[21:21:43]Set new block at: 12, 8
+[21:21:43]Set new block at: 14, 6
+[21:21:43]Set new block at: 14, 4
+[21:21:44]Set new block at: 12, 4
+[21:21:44]Set new block at: 11, 4
+[21:21:44]Set new block at: 13, 3
+[21:21:44]Set new block at: 14, 3
+[21:21:44]Set new block at: 17, 2
+[21:21:44]Set new block at: 18, 2
+[21:21:45]Set new block at: 20, 3
+[21:21:45]Set new block at: 20, 5
+[21:21:45]Set new block at: 19, 8
+[21:21:45]Set new block at: 14, 10
+[21:21:55]Game has been closed
+[21:21:55]Game has closed
