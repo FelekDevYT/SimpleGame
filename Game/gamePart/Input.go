@@ -54,25 +54,29 @@ func input() {
 			}
 		}
 		if isOpenedInventory {
-			for i := 0; i < 7; i++ {
-				x1 := int32(360 + (50 * i))
-				x2 := int32(410 + (50 * i))
-				y1 := int32(SCREEN_HEIGHT - 380)
-				y2 := int32(SCREEN_HEIGHT - 330)
+			c := 0
+			for j := 0; j < 5; j++ {
+				for i := 0; i < 7; i++ {
+					x1 := int32(360 + (50 * i))
+					x2 := int32(410 + (50 * i))
+					y1 := int32(SCREEN_HEIGHT - 380 + rune(CUBE_SIZE*j))
+					y2 := int32(SCREEN_HEIGHT - 330 + rune(CUBE_SIZE*j))
 
-				if rl.GetMouseX() >= x1 &&
-					rl.GetMouseX() <= x2 &&
-					rl.GetMouseY() >= y1 &&
-					rl.GetMouseY() <= y2 &&
-					rl.IsMouseButtonPressed(rl.MouseLeftButton) {
+					if rl.GetMouseX() >= x1 &&
+						rl.GetMouseX() <= x2 &&
+						rl.GetMouseY() >= y1 &&
+						rl.GetMouseY() <= y2 &&
+						rl.IsMouseButtonPressed(rl.MouseLeftButton) {
 
-					if current_slot < len(inventory) {
-						inventory[current_slot] = rune(i)
-						current_slot++
-						SetNewLog("Setting up of new block in inventory")
-					} else {
-						SetNewLog("Inventory is full!")
+						if current_slot < len(inventory) {
+							inventory[current_slot] = rune(c)
+							current_slot++
+							SetNewLog("Setting up of new block in inventory")
+						} else {
+							SetNewLog("Inventory is full!")
+						}
 					}
+					c++
 				}
 			}
 		} else {

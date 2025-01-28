@@ -1,12 +1,42 @@
-[21:21:05]Logger has created/opened
-[21:21:05]Window has successfully initialized
-[21:21:05]Setting up window icon...
-[21:21:05]Successfully loaded logo.png
-[21:21:05]FramesPerSecond set to 120
-[21:21:05]Map successfully created
-[21:21:05]Setting up Lua Interpreter...
-[21:21:05]Setting default value to EVENTS
-[21:21:05]Game has successfully created
-[21:21:05]Game has going to update part
-[21:21:08]Game has been closed
-[21:21:08]Game has closed
+[21:21:01]Logger has created/opened
+[21:21:01]Window has successfully initialized
+[21:21:01]Setting up window icon...
+[21:21:01]Successfully loaded logo.png
+[21:21:01]FramesPerSecond set to 120
+[21:21:01]Map successfully created
+[21:21:01]Setting up Lua Interpreter...
+[21:21:01]Setting default value to EVENTS
+[21:21:01]Game has successfully created
+[21:21:01]Game has going to update part
+[21:21:02]Setting up of new block in inventory
+[21:21:03]Set current slot to 0
+[21:21:03]Set new block at: 8, 4
+[21:21:03]Set new block at: 9, 3
+[21:21:04]Set new block at: 10, 3
+[21:21:04]Set new block at: 15, 6
+[21:21:04]Set new block at: 12, 6
+[21:21:04]Set new block at: 10, 4
+[21:21:04]Set new block at: 10, 3
+[21:21:04]Set new block at: 11, 3
+[21:21:05]Set new block at: 13, 8
+[21:21:05]Set new block at: 12, 9
+[21:21:05]Set new block at: 12, 10
+[21:21:05]Set new block at: 10, 11
+[21:21:05]Set new block at: 13, 9
+[21:21:13]Set current slot to 1
+[21:21:15]Setting up of new block in inventory
+[21:21:16]Setting up of new block in inventory
+[21:21:16]Set current slot to 1
+[21:21:17]Set current slot to 2
+[21:21:17]Set new block at: 13, 7
+[21:21:17]Set new block at: 13, 7
+[21:21:17]Set new block at: 11, 8
+[21:21:17]Set current slot to 0
+[21:21:18]Set new block at: 11, 8
+[21:21:18]Set current slot to 1
+[21:21:18]Set current slot to 2
+[21:21:18]Set new block at: 12, 8
+[21:21:18]Set current slot to 0
+[21:21:18]Set current slot to 2
+[21:21:19]Game has been closed
+[21:21:19]Game has closed
