@@ -1,3 +1,6 @@
 local m = require("api")
+local worldEvent = m.getWorldEvent()
 
---m.addBlock(255,153,0)
+if worldEvent.isWorldOpened() then
+    m.addBlock(255,153,0)
+end

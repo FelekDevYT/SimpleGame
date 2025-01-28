@@ -48,4 +48,6 @@ func InitWindowOfGame(wn string) {
 	for _, folder := range ModPaths {
 		LuaInt.DoFile(folder + "\\pre_run.lua")
 	}
+
+	IsOpened = true
 }

@@ -53,13 +53,14 @@ var (
 	isOpenedMenu      bool    = false
 	current_slot              = 0
 	inventory         [7]rune = [7]rune{
-		7, 7, 7, 7, 7, 7, 7,
+		1, 1, 1, 1, 1, 1, 1,
 	}
 	iron                []rune = []rune{0, 5, 0, 5}
 	gold                []rune = []rune{0, 9, 0, 9}
 	diamond             []rune = []rune{0, 12, 0, 12}
 	WorldName                  = "newWorld"
 	IsAlredyGenerated          = false
+	IsOpened                   = false
 	LuaInt                     = lua.NewState()
 	ModPaths                   = [1024]string{}
 	lastAddedBlockIndex        = 7

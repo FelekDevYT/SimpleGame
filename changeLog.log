@@ -1,29 +1,12 @@
-[21:21:34]Logger has created/opened
-[21:21:35]Window has successfully initialized
-[21:21:35]Setting up window icon...
-[21:21:35]Successfully loaded logo.png
-[21:21:35]FramesPerSecond set to 120
-[21:21:35]Map successfully created
-[21:21:35]Setting up Lua Interpreter...
-[21:21:35]Setting default value to EVENTS
-[21:21:35]Game has successfully created
-[21:21:35]Game has going to update part
-[21:21:36]Setting up of new block in inventory
-[21:21:37]Setting up of new block in inventory
-[21:21:37]Setting up of new block in inventory
-[21:21:37]Setting up of new block in inventory
-[21:21:37]Setting up of new block in inventory
-[21:21:38]Setting up of new block in inventory
-[21:21:39]Setting up of new block in inventory
-[21:21:39]Setting up of new block in inventory
-[21:21:39]Setting up of new block in inventory
-[21:21:40]Set current slot to 0
-[21:21:40]Set new block at: 11, 7
-[21:21:40]Set new block at: 16, 8
-[21:21:40]Set new block at: 14, 9
-[21:21:41]Set new block at: 10, 9
-[21:21:43]Set new block at: 7, 8
-[21:21:43]Set new block at: 10, 9
-[21:21:43]Set new block at: 13, 9
-[21:21:44]Game has been closed
-[21:21:44]Game has closed
+[21:21:05]Logger has created/opened
+[21:21:05]Window has successfully initialized
+[21:21:05]Setting up window icon...
+[21:21:05]Successfully loaded logo.png
+[21:21:05]FramesPerSecond set to 120
+[21:21:05]Map successfully created
+[21:21:05]Setting up Lua Interpreter...
+[21:21:05]Setting default value to EVENTS
+[21:21:05]Game has successfully created
+[21:21:05]Game has going to update part
+[21:21:08]Game has been closed
+[21:21:08]Game has closed

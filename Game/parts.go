@@ -226,7 +226,7 @@ func aboutPart() {
 }
 
 func gameScreen(wn string) {
-
+	gamePart.IsOpened = false
 	gamePart.InitWindowOfGame(wn)
 	gamePart.SetNewLog("Game has successfully created")
 

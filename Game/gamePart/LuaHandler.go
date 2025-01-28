@@ -27,6 +27,10 @@ func WorldEventLoader(L *lua.LState) map[string]lua.LGFunction {
 			L.Push(lua.LBool(api.WorldEvent.isWorldAlreadyOpened))
 			return 1
 		},
+		"isWorldOpened": func(L *lua.LState) int {
+			L.Push(lua.LBool(IsOpened))
+			return 1
+		},
 	}
 }
 

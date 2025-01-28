@@ -58,6 +58,8 @@ func Update() {
 	//CLEARING UP CHASE OF EVENTS
 
 	clearAndSetDisable(&api)
+
+	IsOpened = false
 }
 
 func playerReffer() {
